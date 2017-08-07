@@ -12,16 +12,21 @@
    {% for pin in pins %}
    <p>The {{ pins[pin].name }}
    {% if pins[pin].state == true %}
-      is currently on (<a href="/{{pin}}/off">turn off</a>)
+      is currently on.
+      <a class="btn btn-outline-danger" href="/{{pin}}/off" role="button" style='padding-top:20px'>Turn Off</a>
    {% else %}
-      is currently off (<a href="/{{pin}}/on">turn on</a>)
+      is currently off.
+      <a class="btn btn-outline-success" href="/{{pin}}/on" role="button" style='padding-top:20px'>Turn On</a>
    {% endif %}
    </p>
    {% endfor %}
 
    {% if message %}
-   <h2>{{ message }}</h2>
+   <div class="alert alert-success">
+     <{{ message }}
+   </div>
    {% endif %}
+
  </div>
 </body>
 </html>
