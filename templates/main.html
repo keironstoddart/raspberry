@@ -5,8 +5,8 @@
      <link rel="stylesheet" mead='screen' href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
    </head>
 </head>
-
 <body>
+  <div class='container'>
    <h1>Device Listing and Status</h1>
 
    {% for pin in pins %}
@@ -22,6 +22,6 @@
    {% if message %}
    <h2>{{ message }}</h2>
    {% endif %}
-
+ </div>
 </body>
 </html>
